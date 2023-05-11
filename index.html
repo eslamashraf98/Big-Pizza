@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Pizza</title>
+</head>
+
+<body>
+
+    <form action="index.html" action="admin.html">
+        <input type="text" name="firstName" id="firstName" placeholder="first">
+        <input type="text" name="lastName" id="lastName" placeholder="last">
+        <input type="email" name="email" id="email" placeholder="email">
+        <input type="submit" name="submit" id="submit" onclick="passValue()">
+    </form>
+
+    <br>
+    <a href="admin.html" target="_blank">admin</a>
+
+
+
+</body>
+
+<script>
+
+    function passValue()
+    {
+        var firstName = document.getElementById('firstName').value;
+        var lastName = document.getElementById('lastName').value;
+        var email = document.getElementById('email').value;
+        localStorage.setItem("textvalue", firstName);
+        localStorage.setItem("textvalue2", lastName);
+        localStorage.setItem("textvalue3", email);
+        return false;
+    }
+
+
+</script>
+</html>

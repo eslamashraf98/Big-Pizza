@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin</title>
+    </head>
+
+    <body>
+
+        Order From ... <span class="ring" id="result"></span> <span class="ring"
+            id="result2"></span>
+        <br>
+        his email is ... <span class="ring" id="result3"></span>
+
+        <br><br>
+
+        <a href="index.html">home</a>
+
+
+    </body>
+    <script>
+setTimeout(function(){
+   window.location.reload(1);
+}, 10000);
+
+    // var password = prompt("Enter in the password");
+    // if (password == "1234") {
+    //     //location = "media.html"
+
+    // }
+    // else {
+    //     alert("Wrong Password");
+    //     location = "admin.html";
+    // }
+
+    document.getElementById("result").innerHTML = localStorage.getItem("textvalue");
+    document.getElementById("result2").innerHTML = localStorage.getItem("textvalue2");
+    document.getElementById("result3").innerHTML = localStorage.getItem("textvalue3");
+
+
+
+function beep() {
+    if (Window.length <= 1) {
+    var snd = new Audio("mewe.mp3");
+    snd.play();
+    }
+
+}
+beep();
+
+</script>
+</html>
